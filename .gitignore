@@ -1,0 +1,13 @@
+engine
+memory_hog
+cpu_hog
+io_pulse
+*.o
+*.ko
+*.mod.c
+*.mod
+*.order
+*.symvers
+.tmp_versions/
+logs/
+rootfs-*/
