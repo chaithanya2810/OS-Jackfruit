@@ -5,31 +5,11 @@
 * **SRN:** [Your SRN]
 
 ### 2. Build and Run Instructions
-**Build the project:**
-\`\`\`bash
-make
-\`\`\`
-**Load and Verify:**
-\`\`\`bash
-sudo insmod monitor.ko
-ls -l /dev/container_monitor
-\`\`\`
-**Run Supervisor:**
-\`\`\`bash
-sudo ./engine supervisor ./rootfs-alpha
-\`\`\`
-**CLI Operations (New Terminal):**
-\`\`\`bash
-sudo ./engine start alpha ./rootfs-alpha "/memory_hog 10 5" --soft-mib 5
-sudo ./engine ps
-sudo ./engine logs alpha
-sudo ./engine stop alpha
-\`\`\`
-**Cleanup:**
-\`\`\`bash
-sudo rmmod monitor
-make clean
-\`\`\`
+**Build:** \`make\`  
+**Load Kernel Module:** \`sudo insmod monitor.ko\`  
+**Verify Device:** \`ls -l /dev/container_monitor\`  
+**Start Supervisor:** \`sudo ./engine supervisor ./rootfs-alpha\`  
+**Clean Shutdown:** Press \`Ctrl+C\` in supervisor terminal; then \`sudo rmmod monitor\`.
 
 ### 3. Demo with Screenshots
 * **SS1: Multi-container supervision:**
