@@ -1,14 +1,14 @@
 # OS-Jackfruit: Custom Container Runtime
 
 ### 1. Team Information
+**Member 1**
  **Name:** CHAITHANYA.N
- 
-            CH YASHWITHA
-  
  **SRN:** PES1UG24CS124
- 
-           PES1UG24CS121
 
+ **Member 2**
+   **Name:** CH YASHWITHA
+   **SRN:** PES1UG24CS121
+ 
 ### 2. Build and Run Instructions
 **Build:** \`make\`  
 **Load Kernel Module:** \`sudo insmod monitor.ko\`  
