@@ -32,14 +32,22 @@ make clean
 \`\`\`
 
 ### 3. Demo with Screenshots
-* **SS1: Multi-container supervision:** [Link to screenshot]
+* **SS1: Multi-container supervision:**
+  ![multi-container supervision](./screenshots/1.jpeg)
 * **SS2: Metadata tracking:** (Shows `engine ps` output)
+  ![metadata tracking](./screenshots/2.jpeg)
 * **SS3: Bounded-buffer logging:** (Shows `engine logs` output)
+  ![bounded buffer logging](./screenshots/3.jpeg)
 * **SS4: CLI and IPC:** (Shows start/stop commands)
-* **SS5: Soft-limit warning:** (Shows dmesg output)
+  ![cli and ipc](./screenshots/4.jpeg)
+* **SS5: Soft-limit warning:** (Shows dmesg output) and 
 * **SS6: Hard-limit enforcement:** (Shows SIGKILL in dmesg)
+  ![soft limit warning and hard limit enforcement](./screenshots/5&6.jpeg)
 * **SS7: Scheduling experiment:** (Shows duration difference between hi/lo)
+  ![scheduling experiment](./screenshots/7.jpeg)
 * **SS8: Clean teardown:** (Shows "exited cleanly" and no zombies)
+  ![multi-container supervision](./screenshots/8A.jpeg)
+  ![multi-container supervision](./screenshots/8B.jpeg)
 
 ### 4. Engineering Analysis
 
