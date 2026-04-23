@@ -14,36 +14,36 @@
 **SRN:** PES1UG24CS121
  
 ### 2. Build , Load and Run Instructions
-# i) Environment Setup:
-# Install dependencies
+**i) Environment Setup:**
+**Install dependencies**
 sudo apt update && sudo apt install -y build-essential linux-headers-$(uname -r)
 
-# Prepare the Alpine root filesystem
+**Prepare the Alpine root filesystem**
 mkdir rootfs-base
 wget https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-minirootfs-3.20.3-x86_64.tar.gz
 tar -xzf alpine-minirootfs-3.20.3-x86_64.tar.gz -C rootfs-base
 
-# Create writable copies for containers
+**Create writable copies for containers**
 cp -a ./rootfs-base ./rootfs-alpha
 cp -a ./rootfs-base ./rootfs-beta  
 
-# ii) Compilation and Loading:
+**ii) Compilation and Loading:**
 make                               # Build engine and kernel module
 sudo insmod monitor.ko             # Load the Kernel Memory Monitor
 ls -l /dev/container_monitor       # Verify the control device exists
 
-# iii) Execution (Terminal 1 - Supervisor):  
+**iii) Execution (Terminal 1 - Supervisor):**  
 sudo ./engine supervisor ./rootfs-base
 
-# iv) Operations (Terminal 2 - CLI):  
-# Start containers with resource limits
+**iv) Operations (Terminal 2 - CLI):**  
+**Start containers with resource limits**
 sudo ./engine start alpha ./rootfs-alpha "/bin/sh" --soft-mib 10 --hard-mib 80
 sudo ./engine ps                   # View metadata
 sudo ./engine logs alpha           # View logs
 sudo ./engine stop alpha           # Stop container  
 
-# v) Teardown:  
-# In Terminal 1: Press Ctrl+C to shut down supervisor
+**v) Teardown:**  
+**In Terminal 1: Press Ctrl+C to shut down supervisor**
 sudo rmmod monitor                 # Unload kernel module
 make clean                         # Remove binaries and logs  
 
