@@ -1,12 +1,16 @@
 # OS-Jackfruit: Custom Container Runtime
 
 ### 1. Team Information
-**Member 1**
-**Name:** CHAITHANYA.N
+**Member 1**\
+
+**Name:** CHAITHANYA.N\
+
 **SRN:** PES1UG24CS124
 
-**Member 2**
-**Name:** CH YASHWITHA
+**Member 2**\
+
+**Name:** CH YASHWITHA\
+
 **SRN:** PES1UG24CS121
  
 ### 2. Build and Run Instructions
